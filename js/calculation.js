@@ -32,16 +32,16 @@ document.getElementById("second-card").addEventListener("click", function (e) {
 });
 
 // third card operation
- ductQuantity = document.getElementById("third-quantity").innerText;
-
-  //  getting data using common function using getElementById method
-  const pd = getData("third-title", "third-price", "third-quantity");
-document.getElementById("third-card").addEventListener("click", function () {
+ document.getElementById("third-card").addEventListener("click", function () {
   serial += 1;
   //   //   get the data from htm using id
   //   const productName = document.getElementById("third-title").innerText;
   //   const productPrice = document.getElementById("third-price").innerText;
-  //   const pro
+  //   const productQuantity = document.getElementById("third-quantity").innerText;
+
+  //  getting data using common function using getElementById method
+  const pd = getData("third-title", "third-price", "third-quantity");
+
   //minus logic
   const priceTotal = parseInt(pd.productPrice) - parseInt(pd.productQuantity);
   //   show the data using function
@@ -51,7 +51,23 @@ document.getElementById("third-card").addEventListener("click", function () {
 });
 
 // fourth card 
-
+document.getElementById("fourth-card").addEventListener("click", function () {
+    serial += 1;
+    //   //   get the data from htm using id
+    //   const productName = document.getElementById("third-title").innerText;
+    //   const productPrice = document.getElementById("third-price").innerText;
+    //   const productQuantity = document.getElementById("third-quantity").innerText;
+  
+    //  getting data using common function using getElementById method
+    const pd = getData("fourth-title", "fourth-price", "fourth-quantity");
+  
+    //minus logic
+    const priceTotal = parseInt(pd.productPrice) * parseInt(pd.productQuantity);
+    //   show the data using function
+    displayData(pd.productName, pd.productPrice, pd.productQuantity, priceTotal);
+    //   disabled button using function
+    disabledButton("fourth-card");
+  });
 
 // card four oepration
 document.getElementById("second-last").addEventListener("click", function (e) {
